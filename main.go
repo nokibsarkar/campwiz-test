@@ -44,10 +44,6 @@ func initDB() {
 		log.Fatalf("Failed to connect to database: %v", err)
 
 	}
-	res := db.Raw("SELECT 1").Scan(&struct{}{})
-	if res.Error != nil {
-		log.Fatalf("Failed to ping database: %v", res.Error)
-	}
 	co, err := db.DB()
 	if err != nil {
 		log.Fatalf("Failed to get DB instance: %v", err)
