@@ -1,6 +1,6 @@
 module github.com/nokibsarkar/campwiz-test
 
-go 1.22.0
+go 1.20.0
 
 require (
 	github.com/gin-gonic/gin v1.10.0
