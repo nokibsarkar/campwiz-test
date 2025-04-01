@@ -33,7 +33,6 @@ func initDB() {
 	database := "s55789__campwiz_test"
 	host := "tools.db.svc.wikimedia.cloud"
 	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8mb4&parseTime=True&loc=Local", username, password, host, database)
-	log.Printf("Connecting to database with DSN: %s", dsn)
 	conn := mysql.Open(dsn)
 	if conn == nil {
 		log.Fatalf("Failed to create connection: %v", conn)
