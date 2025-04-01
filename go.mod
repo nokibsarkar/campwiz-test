@@ -1,6 +1,6 @@
 module github.com/nokibsarkar/campwiz-test
 
-// go 1.24
+go 1.21.5
 
 // toolchain go1.24.1
 
