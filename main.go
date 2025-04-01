@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
@@ -13,6 +14,11 @@ import (
 var db *gorm.DB
 
 func initConfig() {
+	wd, err := os.Getwd()
+	if err != nil {
+		log.Fatalf("Error getting current directory: %v", err)
+	}
+	fmt.Printf("Current Directory: %s\n", wd)
 	viper.SetConfigName(".env")
 	viper.SetConfigType("env")
 	viper.AddConfigPath(".")
