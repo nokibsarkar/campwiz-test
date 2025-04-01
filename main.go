@@ -67,5 +67,5 @@ func main() {
 		c.String(200, "Database connection successful")
 	})
 
-	r.Run()
+	r.Run("0.0.0.0:8000")
 }
